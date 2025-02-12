@@ -1,7 +1,9 @@
 <?php
-$pokok = 10000000;
-$jabatan = "Manager";
+
 $jam = 300;
+$pokok = 10000000;
+
+
 if ($pokok <=3000000) 
 {  
     $pajak = 5;
@@ -15,6 +17,16 @@ else if ($pokok >5000000){
 if ($jam >200){ 
     $bonus = ($jam - 200) *20000;
 }
+
+if($pokok >=5000000){
+$jabatan = "Manager";
+} 
+else if($pokok  <=3000000){
+$jabatan = "Staff";
+} 
+else if($pokok >3000000 && $pokok <=5000000){
+$jabatan = "Supervisor";
+} 
 
 $potongan = $pokok *($pajak/100);
 $bersih = $pokok - $potongan + $bonus;
