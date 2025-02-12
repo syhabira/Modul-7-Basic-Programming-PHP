@@ -1,6 +1,6 @@
 <?php
 
-$member = "Non-member";
+$member = "Silver";
 $belanja = 1200000;
 
 
