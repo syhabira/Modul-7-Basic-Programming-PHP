@@ -2,26 +2,22 @@
 
 $daftar = [
     [
-        "nama" =>"Keyza", "nilai" =>85, "keterangan" =>"Lulus"
+        "nama" =>"Keyza", "nilai" =>85
     ],
     [
-        "nama" =>"Yunita", "nilai" =>82, "keterangan" =>"Lulus"
+        "nama" =>"Yunita", "nilai" =>82
     ],
     [
-        "nama" =>"Sabria", "nilai" =>80, "keterangan" =>"Lulus"
+        "nama" =>"Sabria", "nilai" =>80
     ],
     [
-        "nama" =>"Jasmine", "nilai" =>70, "keterangan" =>"Tidak Lulus"
+        "nama" =>"Jasmine", "nilai" =>70
     ],
 ];
 
-// if("nilai">=85 && "nilai"<=100){
-//     echo "Lulus";
-// }
-// elseif ("nilai" <85 && "nilai" >=75) {
-//     echo "Remedial";
-// }
-// else
+
+
+
 
 echo "<h1>Daftar Nilai Siswa</h1>";
 
@@ -31,11 +27,23 @@ echo "<table border='1' cellpadding='10' cellspacing='0'>";
 echo "<tr><th>Nama</th><th>Nilai</th><th>Keterangan</th></tr>";  // Header tabel
 
 // Menampilkan data
-foreach ($daftar as $row) {
+foreach ($daftar as $d) {
     echo "<tr>";
-    echo "<td>" . $row["nama"] . "</td>";
-    echo "<td>" . $row["nilai"] . "</td>";
-    echo "<td>" . $row["keterangan"] . "</td>";
+    echo "<td>" . $d["nama"] . "</td>";
+    echo "<td>" . $d["nilai"] . "</td>";
+    
+    
+if($d["nilai"]>=85 && $d["nilai"]<=100){
+        echo "<td style='color: green;'> Lulus </td>";
+}
+elseif ($d["nilai"] <85 && $d["nilai"] >=75) {
+        echo "<td style='color: orange;'> Remedial </td>";
+}
+else {
+    echo "<td style='color: red;'> Tidak Lulus </td>";
+}
+    
+    
     echo "</tr>";
 }
 
