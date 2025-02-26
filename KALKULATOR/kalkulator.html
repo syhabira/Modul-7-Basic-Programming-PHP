@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96 mb-15">
+        <h2 class="text-2xl font-bold text-center mb-8  text-indigo-700">
+            KALKULATOR
+        </h2>
+        <form action="">
+            <input type="text" name="bill1" class="w-full p-3 mb-5 border border-gray-400 rounded-md" placeholder="Masukkan Bilangan Pertama" autocomplete="off"> 
+            <input type="text" name="bill2" class="w-full p-3 mb-5 border border-gray-400 rounded-md" placeholder="Masukkan Bilangan Kedua" autocomplete="off"> 
+             <select name="operasi" class="w-full p-3 mb-5 border border-gray-400 rounded-md">
+                <option value="tambah">+</option>
+                <option value="kurang">-</option>
+                <option value="kali">x</option>
+                <option value="bagi">/</option>
+             </select>
+             <input type="submit" name="hitung" value="Hitung" class="w-full bg-indigo-700 p-3 text-white rounded-md font-semibold hover:bg-indigo-500 mb-5">
+             <input type="text" name="bill2" class="w-full p-3 mb-5 border border-gray-400 rounded-md" placeholder="Hasil Bilangan" readonly>
+        </form>
+    </div>
+
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-semibold text-center mb-8 ">
+            Hasil Penilaian
+        </h2>
+        <table border='1' cellpadding='10' cellspacing='0' class=" border-gray-700 p-2 border divide-y divide-gray-500 w-full text-left">
+          <tr>
+            <th>Nama</th>
+            <th>Nilai</th>
+            <th>Keterangan</th>
+          </tr> 
+          </table>
+    </div>
+  </body>
+</html>

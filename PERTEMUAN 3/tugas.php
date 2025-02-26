@@ -4,6 +4,6 @@
     <label>Bilangan 1</label> <br>
     <input type="number" name="bill1"> <br>
     <label>Bilangan 2</label> <br>
-    <input type="number" name="ill2"> <br> <br>
+    <input type="number" name="bill2"> <br> <br>
     <input type="submit" name="oke"> <br>
  </form>
